@@ -21,12 +21,14 @@ pipeline {
                         sh 'node ./frontend/test.js'
                     }
                 }
-                stage('deployment') {
-                    when { expression { env.GIT_BRANCH == 'origin/main' } }
-                }
+                stage('Deployment') {
+                    when { 
+                        expression { env.GIT_BRANCH == 'origin/main' } 
+                        }
                     steps {
                     echo 'deploying'
                 }
+              }
             }
         }
     }
