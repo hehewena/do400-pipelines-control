@@ -24,6 +24,10 @@ pipeline {
                 stage('Deployment') {
                     when { 
                         expression { env.GIT_BRANCH == 'origin/main' } 
+                        beforeInput tru
+                    }
+                    input {
+                        message 'Deploy the application?'
                     }
                     steps {
                         echo 'deploying'
