@@ -26,7 +26,7 @@ pipeline {
                         expression { env.GIT_BRANCH == 'origin/main' } 
                     }
                     steps {
-                        echo 'deploying'
+                        echo 'Step not executed...'
                 }
               }
             }
